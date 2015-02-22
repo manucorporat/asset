@@ -1,7 +1,6 @@
 package asset
 
 import (
-	"github.com/mitchellh/osext"
 	"path"
 )
 
@@ -37,10 +36,6 @@ func computeBasePath(aPath string) {
 	if path.IsAbs(aPath) {
 		_basePath = aPath
 	} else {
-		absP, err := osext.ExecutableFolder()
-		if err != nil {
-			panic(err.Error())
-		}
-		_basePath = path.Join(absP, aPath)
+		_basePath = path.Join(basepath(), aPath)
 	}
 }
