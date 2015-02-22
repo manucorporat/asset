@@ -2,6 +2,11 @@
 
 `asset` helps golang developers to reference external assets inside binaries.
 
+##The goal
+
+ - Configurable base path for assets
+ - Relative paths done right
+
 ###What wait! where is the trouble?
 Golang does not have a built-in bundle manager like many popular languages do. ie. It does not generate a portable `.app` `.jar` container that includes everything the app needs (binaries and assets).
 
